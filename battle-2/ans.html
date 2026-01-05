@@ -1,30 +1,43 @@
-<div></div>
+<div class=div-1></div>
+<div class=div2></div>
+<div class=div-2></div>
 
 <style>
   body {
     background: #EFEB99;
-    margin: 0; /* Removes default browser spacing */
+    margin: 0;
   }
-  div {
-    width: 55px;
-    height: 150px;
+  .div-1{
+    width: 4px;
+    height: 300px;
     background: #8647E6;
     
-    /* 1. Position the 'original' brick at the bottom-left */
-    position: absolute;
-    bottom: -25px; 
-    left: 0px;
+  }
+  .div-2{
+    width: 4px;
+    height: 300px;
+    background: #8647E6;
+    position:right;
+    position:absolute;
+  right:0;
+  top:0;
     
-    /* 2. Use Box Shadow to clone the brick */
+  }
+  .div2 {
+    width: 55px;
+    height: 135px;
+    background: #8647E6;
+
+    position: absolute;
+    bottom: 0;
+    left: 0px; 
+
     box-shadow: 
-      /* Bottom Row Clones (Horizontal) */
-      106px 0 0 #8647E6,
-      212px 0 0 #8647E6,
-      318px 0 0 #8647E6,
-      
-      /* Top Row Clones (Moved Up and Offset Right) */
-      53px -175px 0 #8647E6,
-      159px -175px 0 #8647E6,
-      265px -175px 0 #8647E6;
+      116px 0 0 #8647E6,
+      232px 0 0 #8647E6,
+      348px 0 0 #8647E6,
+      60px -165px 0 #8647E6,
+      172px -165px 0 #8647E6,
+      282px -165px 0 #8647E6;
   }
 </style>
