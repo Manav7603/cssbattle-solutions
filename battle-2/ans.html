@@ -1,0 +1,30 @@
+<div></div>
+
+<style>
+  body {
+    background: #EFEB99;
+    margin: 0; /* Removes default browser spacing */
+  }
+  div {
+    width: 55px;
+    height: 150px;
+    background: #8647E6;
+    
+    /* 1. Position the 'original' brick at the bottom-left */
+    position: absolute;
+    bottom: -25px; 
+    left: 0px;
+    
+    /* 2. Use Box Shadow to clone the brick */
+    box-shadow: 
+      /* Bottom Row Clones (Horizontal) */
+      106px 0 0 #8647E6,
+      212px 0 0 #8647E6,
+      318px 0 0 #8647E6,
+      
+      /* Top Row Clones (Moved Up and Offset Right) */
+      53px -175px 0 #8647E6,
+      159px -175px 0 #8647E6,
+      265px -175px 0 #8647E6;
+  }
+</style>
