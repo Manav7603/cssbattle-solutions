@@ -1,0 +1,59 @@
+<div class="c"><div class="h">  </div><div class="q">  </div><div class="r">  </div><div class="s">  </div></div>
+<style>
+  body{
+    background: #F4DA64;
+    margin:0;
+  }
+  
+  .c {
+    display:grid;
+    place-items:center;
+   height:100vh;
+  }
+  .c > div {
+    grid-area: 1/1;
+  }
+  .h
+  {
+     width: 60px;
+    height: 60px;
+    grid-area:1/1;
+    background: #E25C57;
+    
+  }
+
+  .q
+  {
+    width: 20px;
+    height: 60px;
+    background: transparent; 
+    transform: rotate(45deg);
+   
+    box-shadow: 
+      0 -90px 0 #E25C57, 
+      0 90px 0 #E25C57;  
+  }
+  .r
+  {
+    width: 20px;
+    height: 60px;
+    background: transparent; 
+    transform: rotate(-45deg);
+   
+    box-shadow: 
+      0 -90px 0 #E25C57, 
+      0 90px 0 #E25C57;  
+  }
+  .s
+  {
+    width: 30px;
+    height: 30px;
+    background: #E25C57; 
+    border-radius:50%;  
+    box-shadow: 
+      0 -90px 0 #E25C57, 
+      90px 0 0 #E25C57, 
+    -90px 0 0 #E25C57,  
+    0 90px 0 #E25C57;  
+  }
+</style>
