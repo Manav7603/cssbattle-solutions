@@ -1,0 +1,51 @@
+<div class="shape"></div>
+
+<style>
+  body {
+    background: #FADE8B;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  .shape {
+    position: relative;
+    /* The gap width */
+    width: 50px;
+    /* The height of the straight vertical part */
+    height: 50px;
+    /* The base U-shape: borders on Left, Right, and Bottom */
+    border: 50px solid #1A1A1A;
+    border-top: 0;
+  }
+
+  .shape::before,
+  .shape::after {
+    content: '';
+    position: absolute;
+    /* Inner width of the arch */
+    width: 50px;
+    /* Height of the arch's inner curve (radius) */
+    height: 25px;
+    /* The arch stroke */
+    border: 50px solid #222222;
+    border-bottom: 0;
+    /* Create the semi-circle (50px border + 25px radius = 75px outer radius) */
+    border-radius: 75px 75px 0 0;
+    /* Move it up to sit on top of the base */
+    top: -75px;
+  }
+
+  /* Position the Left Arch */
+  .shape::before {
+    /* Align the arch's right leg with the base's left leg */
+    left: -150px;
+  }
+
+  /* Position the Right Arch */
+  .shape::after {
+    /* Align the arch's left leg with the base's right leg */
+    left: 50px;
+  }
+</style>
