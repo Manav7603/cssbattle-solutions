@@ -1,0 +1,38 @@
+<style>
+  body {
+    background: #A82973;
+    margin: 0;
+  }
+  div {
+    position: absolute;
+    /* Vertical Center: (300 - 120) / 2 = 90px */
+    top: 90px;
+    /* Horizontal Center: (400 - 320) / 2 = 40px */
+    left: 40px;
+    width: 50px;
+    height: 120px;
+    background: #FFD0FA;
+    color: #FFD0FA;
+    /* 70px: Right rectangle of 1st figure (50px width + 20px gap)
+       200px: Start of 2nd figure
+       270px: Right rectangle of 2nd figure
+    */
+    box-shadow: 70px 0, 200px 0, 270px 0;
+  }
+  div::before, div::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: currentColor;
+    border-radius: 50%;
+    /* Centered over the gap: 50px (rect) + 10px (half gap) - 25px (radius) = 35px */
+    left: 35px;
+    box-shadow: 200px 0;
+  }
+  /* Top circle: moved up to create space */
+  div::before { top: -70px; }
+  /* Bottom circle: moved down to create space */
+  div::after { bottom: -70px; }
+</style>
+<div></div>
